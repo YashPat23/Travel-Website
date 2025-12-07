@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Explore the World — Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🌍 Explore the World</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Contact Us</h1>
+
+    <!-- Example form (client-side only) -->
+    <form id="contactForm" onsubmit="return handleFormSubmit(event)">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="reason">Reason for contact</label>
+      <select id="reason" name="reason" required>
+        <option value="">--Choose--</option>
+        <option>Trip planning</option>
+        <option>Partnerships</option>
+        <option>Feedback</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <div class="form-actions">
+        <button type="submit">Send Message</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <div id="formResponse" aria-live="polite" class="form-response"></div>
+  </main>
+
+  <footer>
+    <p>Questions? Email us at <a href="mailto:info@exploretheworld.com">info@exploretheworld.com</a></p>
+    <p>&copy; <span id="year-3"></span> Explore the World</p>
+  </footer>
+</body>
+</html>
